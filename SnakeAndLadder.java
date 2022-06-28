@@ -27,5 +27,11 @@ public class SnakeAndLadder {
 			System.out.println("NO Play");
 		}
 
+		if (currentPosition < START_POSITION) { // UC4 - Player restarts from 0
+			currentPosition = START_POSITION;
+		} else if (currentPosition > 100) {
+			currentPosition -= diceNumber;
+		}
+		System.out.println("Player moves position: " + currentPosition);
 	}
 }
